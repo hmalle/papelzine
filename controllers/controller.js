@@ -1,5 +1,5 @@
 
-const db = require("../models/");
+const db = require("../../models/");
 
 router.get("/api/saved-articles", function(req, res) {
   db.Article.find({saved:true}).then(function(articles){

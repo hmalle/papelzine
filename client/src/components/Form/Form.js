@@ -3,8 +3,8 @@ import React from "react";
 import "./Form.css";
 
 const Form = props  =>
-  <div className="jumbotron">
-    <h2 className="header">Scientific Papers</h2>
+  <div className="container">
+    <h2>Form Form Form</h2>
   </div>
 
 export default Form;
