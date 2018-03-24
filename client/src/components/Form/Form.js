@@ -1,10 +1,10 @@
 
 import React from "react";
-import "./Header.css";
+import "./Form.css";
 
-const Title = props  =>
+const Form = props  =>
   <div className="jumbotron">
     <h2 className="header">Scientific Papers</h2>
   </div>
 
-export default Title;
+export default Form;

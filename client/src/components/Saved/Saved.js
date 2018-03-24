@@ -1,10 +1,10 @@
 
 import React from "react";
-import "./Header.css";
+import "./Saved.css";
 
-const Title = props  =>
+const Saved = props  =>
   <div className="jumbotron">
     <h2 className="header">Scientific Papers</h2>
   </div>
 
-export default Title;
+export default Saved;
