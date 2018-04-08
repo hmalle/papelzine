@@ -1,10 +1,9 @@
 
 import React from "react";
-import "./Form.css";
 
 const Form = props  =>
   <div className="card">
-    <div className="card-header">
+    <div className="card-header text-center">
       <h5>Search</h5>
     </div>
     <div className="card-body">

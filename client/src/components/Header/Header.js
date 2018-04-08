@@ -1,6 +1,5 @@
 
 import React from "react";
-import "./Header.css";
 
 const Title = props  =>
   <div className="jumbotron">

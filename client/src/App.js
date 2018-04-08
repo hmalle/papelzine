@@ -1,21 +1,19 @@
 import React, { Component } from "react";
-import Header from "./components/Header/";
-import Form from  "./components/Form/";
-import Results from  "./components/Results/";
-import Saved from  "./components/Saved/";
-import "./App.css";
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
+import Home from  "./pages/Home";
+import NoMatch from  "./pages/NoMatch";
+import Header from  "./components/Header/";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header/>
-        <Form></Form>
-        <Results></Results>
-        <Saved></Saved>
-      </div>
-    );
-  }
-}
+const App = () =>(
+  <Router>
+    <div>
+      <Header/>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route component={NoMatch}/>
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
