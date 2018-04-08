@@ -4,24 +4,11 @@ const controller = require("../../controllers/controller");
 
 router.route("/")
   .get(controller.findAll)
-  .post(controller.crate);
+  .post(controller.create);
 
-routes.route("/scrape")
-  .post(controller.scrape);
+router.route("/:id")
+  .get(controller.findById)
+  .put(controller.update)
+  .delete(controller.remove);
 
-routers.route("/articles")
-  .get(controller.findAll);
-
-router.route("/api/saved-articles")
-  .get(controller.findSaved);
-
-router.route("/api/marksaved/:id")
-  .put(controller.saveArticle);
-
-routes.route("/api/markUnsaved/:id")
-  .put(controller.unsaveArticle);
-
-router.route("/api/article-notes/:id")
-  .get(controller.findArticleNotes)
-  .post(controller.saveArticleNotes)
-
+module.exports = router;

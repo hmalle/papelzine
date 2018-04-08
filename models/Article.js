@@ -5,44 +5,17 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var ArticleSchema = new Schema({
-  // `title` is required and of type String
-  title: {
-    type: String,
-    required: true,
-    unique: true
-  },
-
-  // `link` is required and of type String
-  link: {
-    type: String,
-    required: true
-  },
-
-  summary:{
-    type:String,
-    required: true
-  },
-
+const eprintSchema = new Schema({
+  _id:{type:Schema.Types.ObjectId, required:true},
+  title:{ type:String, required:true, unique:true },
+  url: { type:String, required:true },
+  date:{ type:Date, default:Date.now },
   //to mark the article as saved or not
-  saved: {
-    type: Boolean,
-    required: true,
-    default: false
+  saved: { type: Boolean, required: true, default: false
   },
+  { _id:false }
+);
 
-  // `note` is an object that stores a Note id
-  // The ref property links the ObjectId to the Note model
-  // This allows us to populate the Article with an associated Note
-  note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
-  }
-});
-
-// This creates our model from the above schema, using mongoose's model method
-var Article = mongoose.model("Article", ArticleSchema);
-
-// Export the Article model
-module.exports = Article;
+const eprint = mongoose.model("eprint", eprintSchema);
+module.exports = eprint;
 
