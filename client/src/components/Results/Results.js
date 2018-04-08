@@ -3,9 +3,13 @@ import React from "react";
 import "./Results.css";
 
 const Results = props  =>
-  <div className="container">
-    <h3>Results</h3>
-    <br/>
+  <div className="card">
+    <div className="card-header">
+      <h5>Results</h5>
+    </div>
+    <div className="card-body">
+      <br/>
+    </div>
   </div>
 
 export default Results;
