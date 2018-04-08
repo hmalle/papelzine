@@ -4,7 +4,8 @@ import "./Results.css";
 
 const Results = props  =>
   <div className="container">
-    <h2 className="header">Results from the Search</h2>
+    <h3>Results</h3>
+    <br/>
   </div>
 
 export default Results;

@@ -4,7 +4,8 @@ import "./Saved.css";
 
 const Saved = props  =>
   <div className="container">
-    <h2 className="header">Saved Articles</h2>
+    <h3>Saved Articles</h3>
+    <br/>
   </div>
 
 export default Saved;
