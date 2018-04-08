@@ -2,16 +2,16 @@
 import axios from 'axios';
 
 export default {
-  geteprints: function(params){
-    reuturn axios.get("/api/arxiv",{params:params});
+  getEprints: function(params){
+    return axios.get("/api/arxiv",{params:params});
   },
-  getSavedeprints: function(){
+  getSavedEprints: function(){
     return axios.get("/api/eprints/");
   },
-  deleteeprint: function(){
+  deleteEprint: function(id){
     return axios.delete("/api/eprints/"+id);
   },
-  saveeprint: function(){
+  saveEprint: function(eprintData){
     return axios.post("/api/eprints/"+eprintData);
   },
 };
