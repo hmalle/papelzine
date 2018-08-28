@@ -1,4 +1,15 @@
 
-.header:{
-  color: "#fff";
+#header {
+  margin-bottom: 5px;
+}
+#header h2{
+  color: teal;
+  font-weight: 600;
+}
+#header a{
+  color: #2f92d7;
+  text-decoration: none;
+}
+#header a:hover{
+  color: #1c5781;
 }
